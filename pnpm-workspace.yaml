@@ -1,0 +1,7 @@
+packages:
+  - "student-readiness-score-engine-backend/student-readiness-score-engine-backend"
+  - "student-readiness-score-engine-frontend/tt"
+allowBuilds:
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true

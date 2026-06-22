@@ -1,0 +1,14 @@
+{
+  "name": "demo-workspace",
+  "private": true,
+  "scripts": {
+    "dev:backend": "pnpm --filter student-readiness-score-engine-backend dev",
+    "dev:frontend": "pnpm --filter skillgap-detection-agent-frontend dev",
+    "dev": "concurrently -n \"backend,frontend\" -c \"green,blue\" \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+    "build": "pnpm --recursive build",
+    "lint": "pnpm --recursive lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
