@@ -1,0 +1,67 @@
+{
+  "name": "student-readiness-score-engine-backend",
+  "version": "1.0.0",
+  "description": "Skill Gap Detection Agent Backend",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch --tsconfig tsconfig.json -r tsconfig-paths/register src/server.ts",
+    "cli": "tsx --tsconfig tsconfig.json src/cli/assessment-cli.ts",
+    "build": "tsc --project tsconfig.json",
+    "start": "node -r tsconfig-paths/register dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src",
+    "check": "biome check ./src",
+    "check:fix": "biome check --write ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
+  },
+  "dependencies": {
+    "@langchain/community": "^1.1.29",
+    "@langchain/core": "^1.2.1",
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "axios": "^1.17.0",
+    "better-auth": "^1.6.14",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "langchain": "^1.5.2",
+    "mammoth": "^1.12.0",
+    "mime-types": "^3.0.2",
+    "multer": "^2.2.0",
+    "pdf-parse": "^2.4.5",
+    "pg": "^8.21.0",
+    "uuid": "^14.0.0",
+    "word-extractor": "^1.0.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/mime-types": "^3.0.1",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^25.9.3",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/pg": "^8.20.0",
+    "@types/uuid": "^10.0.0",
+    "@types/word-extractor": "^1.0.6",
+    "prisma": "^7.8.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
